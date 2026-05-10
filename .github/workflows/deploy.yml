@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-# deploy in gh-pages
+
 permissions:
   contents: read
   pages: write
