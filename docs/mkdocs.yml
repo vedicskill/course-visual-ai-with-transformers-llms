@@ -1,0 +1,18 @@
+site_name: Visual AI with Transformers & LLMs
+theme: readthedocs
+plugins:
+  - awesome-pages
+  - mkdocstrings
+docs_dir: docs
+nav:
+  - Home: index.md
+  - 'Module 1: Big Picture': module-1/index.md
+  - 'Module 2: Recognition': module-2/index.md
+  - 'Module 3: Detection': module-3/index.md
+  - 'Module 4: Segmentation': module-4/index.md
+  - 'Module 5: Vision-Language': module-5/index.md
+  - 'Module 6: Reasoning': module-6/index.md
+  - 'Module 7: Pose Estimation': module-7/index.md
+  - 'Module 8: Video Intelligence': module-8/index.md
+  - 'Module 9: Generation': module-9/index.md
+  - 'Module 10: Editing': module-10/index.md
