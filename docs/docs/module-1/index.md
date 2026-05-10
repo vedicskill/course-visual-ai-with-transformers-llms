@@ -1,147 +1,232 @@
-# Module 1: Big Picture
+# Module 1 — Big Picture
 
 ## Overview
 
-This module provides a comprehensive introduction to Visual AI, exploring how transformer architectures and large language models are revolutionizing computer vision. We'll examine the evolution from traditional convolutional neural networks to modern transformer-based approaches that enable AI systems to understand and generate visual content.
+Welcome to the **Big Picture** module.
 
-## Key Learning Objectives
+In this module, we will explore the overall roadmap of the course and understand what we are going to build throughout this journey.
 
-- Understand the fundamentals of Visual AI and its applications
-- Learn about transformer architectures and their adaptation to vision tasks
-- Explore the integration of vision and language models
-- Discover real-world applications and future trends
+Modern AI systems are rapidly transforming the field of computer vision using **Transformers** and **Generative AI**. Traditional computer vision systems were mainly limited to detecting predefined objects. Today, modern AI models can:
 
-## Technical Concepts
+- Understand images together with language
+- Detect and segment objects using natural language prompts
+- Analyze images and provide reasoning
+- Understand videos and visual scenes
+- Generate and edit images using AI
+- Build multimodal AI applications that combine vision and language
 
-### Transformer Architecture Basics
+This course is designed in a **practical**, **hands-on**, and **beginner-friendly** manner.
 
-Transformers use attention mechanisms to process sequential data:
+Instead of focusing only on theory, we will gradually build modern AI vision applications step by step throughout the course.
 
-- **Self-Attention**: Models relationships between all elements in the input
-- **Multi-Head Attention**: Captures different types of relationships simultaneously
-- **Feed-Forward Networks**: Process attention outputs
-- **Positional Encoding**: Maintains order information
+---
 
-### Vision Transformers (ViT)
+## What We Will Learn
 
-Vision Transformers treat images as sequences of patches:
+Throughout this course, we will work with modern AI and transformer-based vision models including:
 
-```python
-# Conceptual Vision Transformer implementation
-import torch
-import torch.nn as nn
+- Vision Transformers (ViT)
+- CLIP
+- DINO
+- Grounding DINO
+- Segment Anything Model (SAM)
+- Stable Diffusion
+- Video Transformers
+- Streamlit AI Applications
 
-class PatchEmbedding(nn.Module):
-    def __init__(self, image_size=224, patch_size=16, embed_dim=768):
-        super().__init__()
-        self.patch_size = patch_size
-        self.embed_dim = embed_dim
-        self.num_patches = (image_size // patch_size) ** 2
-        self.projection = nn.Conv2d(3, embed_dim, kernel_size=patch_size, stride=patch_size)
+We will also build real-world AI applications such as:
 
-class VisionTransformer(nn.Module):
-    def __init__(self, image_size=224, patch_size=16, num_classes=1000):
-        super().__init__()
-        self.patch_embed = PatchEmbedding(image_size, patch_size)
-        # Transformer encoder layers would go here
-        self.classifier = nn.Linear(768, num_classes)
+- Image understanding systems
+- AI-powered image search engines
+- Image segmentation applications
+- Text-to-image generation systems
+- Multimodal AI demos
+- Vision-language AI applications
 
-    def forward(self, x):
-        # Implementation placeholder
-        pass
+---
+
+## Demo
+
+In the first part of this module, we will showcase demo applications that you will eventually build by the end of the course.
+
+These demos are designed to give you a high-level understanding of the capabilities of modern Visual AI systems.
+
+The demonstrations will showcase AI capabilities such as:
+
+- Image understanding
+- AI image generation
+- Object grounding
+- Image segmentation
+- Vision-language AI systems
+- Interactive AI applications
+
+> **Note:**  
+> Some demo applications will be developed later in the course once we complete the required foundational modules and application development sections.
+
+---
+
+## Environment Setup
+
+Before building advanced AI applications, we first need to prepare our AI development environment.
+
+In this section, we will complete the full environment setup required for the course.
+
+---
+
+### 1. Install Python and VS Code
+
+Install the following tools:
+
+- **[Python](https://www.python.org/downloads/)**
+    - Recommended verison Python > 3.11
+    - Avoid
+        - Python latest version
+        - Ecosystem instablility with latest release
+- **[Visual Studio Code (VS Code)](https://code.visualstudio.com/Download)**
+      - Recommeded to install latest version
+      - Extentions: Author Preferrable **Microsoft**
+          - Python
+          - Jupyter
+          - Pylance
+
+
+These tools will be used throughout the course for AI development, experimentation, and application building.
+
+---
+
+### 2. Download the Course Folder Structure from GitHub
+
+Download the course repository and project structure from GitHub.
+
+- Repository:  
+  <https://github.com/vedicskill/course-visual-ai-with-transformers-llms>
+
+- Default Branch: `main`
+
+The repository contains:
+
+- source code
+- notebooks
+- applications
+- experiments
+- datasets
+- assets
+- outputs
+
+---
+
+### 3. Install Poetry & Create Virtual Environment
+
+We will use Poetry for:
+
+- dependency management
+- package installation
+- virtual environment management
+
+This helps us maintain clean, isolated, and reproducible AI development environments.
+
+---
+
+#### Install Poetry
+
+Go to the official Poetry documentation:
+
+- <https://python-poetry.org/docs/>
+
+Navigate to the installation section and choose your preferred installation method.
+
+The most recommended approach is using the official installer.
+
+---
+
+##### Linux, macOS, Windows (WSL)
+
+```bash
+curl -sSL https://install.python-poetry.org | python3 -
 ```
 
-### Multimodal Learning
+##### Windows (PowerShell)
 
-Combining vision and language for richer understanding:
-
-- CLIP (Contrastive Language-Image Pretraining)
-- DALL-E for image generation
-- GPT-4V for visual question answering
-
-## Beginner-Friendly Explanation
-
-Imagine you're looking at a photograph. Your brain doesn't just see pixels - it understands the scene, recognizes objects, and can describe what's happening. Traditional computer vision was like looking through a tiny window, scanning the image bit by bit. Transformers are like having a superpower that lets you see the entire picture at once and understand how everything connects.
-
-## Applications
-
-- **Medical Imaging**: Analyzing X-rays and MRIs
-- **Autonomous Vehicles**: Understanding road scenes
-- **Content Moderation**: Detecting inappropriate content
-- **Accessibility**: Helping visually impaired users
-- **Creative Tools**: AI-assisted design and art
-
-## Challenges and Considerations
-
-- Computational requirements
-- Data privacy concerns
-- Bias in training data
-- Interpretability of decisions
-
-## Source Code Reference
-
-Path: `../../m0_big_picture/`
-
-```python
-# Placeholder for transformer implementation
-# Future: Import transformers library and demonstrate ViT
-from transformers import ViTModel, ViTConfig
-
-# Load pre-trained Vision Transformer
-model = ViTModel.from_pretrained('google/vit-base-patch16-224')
+```powershell
+(Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py -
 ```
 
-## Notebook Reference
+Once Poetry is installed, follow the steps provided in the official documentation to initialize and manage the project environment.
 
-Interactive notebooks exploring transformer concepts:
+---
 
-- [Transformer Basics](../../m0_big_picture/notebooks/)
-- [Vision Transformer Demo](../../m0_big_picture/notebooks/)
+#### Install Libraries
 
-## Dataset Reference
+To install packages using Poetry, use the `add` command.
 
-Key datasets for Visual AI:
+Example:
 
-- **ImageNet**: 1.2 million images, 1000 classes
-- **COCO**: Common Objects in Context, for object detection
-- **OpenImages**: Large-scale dataset with rich annotations
-
-## API Reference
-
-[Placeholder for API documentation]
-
-Common libraries:
-- Hugging Face Transformers
-- PyTorch Vision
-- TensorFlow/Keras
-
-## Training Pipeline
-
-[Placeholder for training pipeline]
-
-Typical steps:
-1. Data preprocessing
-2. Model architecture selection
-3. Training loop with optimization
-4. Validation and testing
-5. Model deployment
-
-## Configuration Files
-
-[Placeholder for configuration examples]
-
-```yaml
-# Example configuration for Vision Transformer training
-model:
-  name: vit_base_patch16_224
-  num_classes: 1000
-
-training:
-  batch_size: 32
-  learning_rate: 1e-3
-  epochs: 100
-
-data:
-  dataset: imagenet
-  image_size: 224
+```bash
+poetry add opencv-python
 ```
+
+---
+
+#### Install Required Libraries
+
+For this course, the required libraries are already defined inside the `requirements.txt` file.
+
+```txt
+opencv-python
+ultralytics
+numpy
+torch
+torchvision
+transformers
+timm
+accelerate
+diffusers
+```
+
+To install all required packages:
+
+##### Linux, macOS, Windows (WSL)
+
+```bash
+poetry add $(cat requirements.txt)
+```
+
+##### Windows (PowerShell)
+
+```powershell
+Get-Content requirements.txt | ForEach-Object { poetry add $_ }
+```
+
+---
+
+### 4. Quick Check on CPU vs GPU
+
+We will briefly understand:
+
+- What is a CPU
+- What is a GPU
+- Why GPUs are important for AI
+- How to check GPU availability in PyTorch
+
+This section is designed as a beginner-friendly introduction.
+
+Advanced GPU optimization and performance tuning topics will be covered later in the course.
+
+---
+
+### 5. Run Our First AI Model
+
+Finally, we will run our first transformer-based AI model to verify that our environment is correctly configured.
+
+This step confirms that:
+
+- Python is working correctly
+- required libraries are installed
+- PyTorch is functioning properly
+- the AI environment is fully ready for the upcoming modules
+
+---
+
+## Next Step
+
+In the next lesson, we will officially begin our journey into **Visual AI with Transformers and Large Language Models (LLMs)**.

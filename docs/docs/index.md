@@ -48,14 +48,5 @@ This course is structured as a progressive journey through Visual AI concepts:
 - [Module 9: Generation](module-9/index.md)
 - [Module 10: Editing](module-10/index.md)
 
-## Getting Started
-
-To run the documentation locally:
-
-```bash
-cd docs
-pip install -r mkdocs_requirements.txt
-mkdocs serve -f mkdocs.yml
-```
 
 Navigate through the modules to explore the course content and practical implementations.
