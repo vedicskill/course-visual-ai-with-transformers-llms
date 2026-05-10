@@ -172,15 +172,16 @@ poetry add opencv-python
 For this course, the required libraries are already defined inside the `requirements.txt` file.
 
 ```txt
+numpy
 opencv-python
 ultralytics
-numpy
 torch
 torchvision
 transformers
 timm
 accelerate
 diffusers
+streamlit
 ```
 
 To install all required packages:

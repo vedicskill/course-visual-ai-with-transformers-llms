@@ -1,3 +1,10 @@
+numpy
 opencv-python
+ultralytics
+torch
+torchvision
 transformers
-pytorch
+timm
+accelerate
+diffusers
+streamlit
