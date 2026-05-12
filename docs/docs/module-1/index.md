@@ -226,6 +226,19 @@ This step confirms that:
 - PyTorch is functioning properly
 - the AI environment is fully ready for the upcoming modules
 
+### Optional : Configure Hugging Face Model Storage Dictory
+
+By default, when you download models using the Transformers library, the models are stored inside the system cache directory.
+To keep your project organized, you can configure a dedicated folder to store all Hugging Face models locally within the project.
+
+Add the following code at the beginning of your Python file:
+```python
+import os
+# add HF_HOME enviroment variable and set the desired path
+os.environ["HF_HOME"] = "./models/huggingface"
+```
+This configuration ensures that all downloaded Hugging Face models are stored inside the specified `models/huggingface` directory instead of the default system cache location.
+
 ---
 
 ## Next Step
