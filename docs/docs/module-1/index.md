@@ -234,10 +234,12 @@ To keep your project organized, you can configure a dedicated folder to store al
 Add the following code at the beginning of your Python file:
 ```python
 import os
-# add HF_HOME enviroment variable and set the desired path
-os.environ["HF_HOME"] = "./models/huggingface"
+# add HF_HOME, TRANSFORMERS_CACHE enviroment variable and set the desired path
+hf_path = "<full path of desired directory>"
+os.environ["HF_HOME"] = hf_path
+os.environ["TRANSFORMERS_CACHE"] = hf_path
 ```
-This configuration ensures that all downloaded Hugging Face models are stored inside the specified `models/huggingface` directory instead of the default system cache location.
+This configuration ensures that all downloaded Hugging Face models are stored inside the specified `hf_path` directory instead of the default system cache location.
 
 ---
 
